@@ -1,0 +1,15 @@
+.canvas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    background-color: beige;
+    border: 1px solid grey;
+}
+
+.pink {
+    background-color: pink;
+}

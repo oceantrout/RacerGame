@@ -2,11 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />
+    <title>Traffic racer</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Audiowide"
+    />
+    <link href="main.css" rel="stylesheet" />
     <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
       charset="utf-8"
     ></script>
     <script
@@ -14,19 +17,56 @@
       integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
       crossorigin="anonymous"
     ></script>
-    <script defer src="app.js"></script>
-    <title>Form</title>
-    <form>
-      <label for="canvas-size">Canvas Size:</label>
-      <input
-        id="input-box"
-        type="number"
-        name="canvas-size"
-        placeholder="e.g. 400"
-      />;
-      <button type="submit">Submit</button>
-    </form>
-    <div class="canvas"></div>
+    <script src="script.js" charset="utf-8"></script>
   </head>
-  <body></body>
+
+  <body>
+    <div id="menu">
+      <h1 id="heading1">Please select your racing car</h1>
+      <div id="container-menu"></div>
+      <div id="startButton"></div>
+      <div id="myProgress">
+        <div id="myBar"></div>
+      </div>
+      <audio id="music1" autoplay loop><source src="SRC/music2.mp3" type="audio/mp3"></audio>  
+    </div>
+  <div id="canvas">
+    <div id="help">
+      <a>Controls: Right, Left, Up & Down arrow keys. <img src="SRC/scoreup.png" height="20px"></img></a>
+      <a> will add 50 points</a>
+      <img src="SRC/mine.png" height="20px"></img>
+      <a> will lose 50% of points</a>
+    </div>
+    <div id="score_div">
+      Current Score: <span id="score"></span> Highest Score:
+      <span id="high_score">0</span>
+
+    </div>
+    <div id="container">
+      <button id="gameStart" class="gameStart">Start</button>
+      <div id="line_1" class="line"></div>
+      <div id="line_2" class="line"></div>
+      <div id="line_3" class="line"></div>
+      <div id="car" class="car"></div>
+      <div id="car_1" class="car"></div>
+      <div id="car_2" class="car"></div>
+      <div id="car_3" class="car"></div>
+      <div id="surprise" class="car"></div>
+      <div id="bad" class="car"></div>
+      <div id="restart_div">
+        <button id="restart">
+          <div id="finalScore"></div>
+          <img
+            src="SRC/Gameover.jpg"
+            alt="Game Over"
+            ,
+            width="100%,"
+            height="100%"
+          />
+        </button>
+      </div>
+    </div>
+          <audio id="music2" autoplay loop muted><source src="SRC/music1.mp3" type="audio/mp3"></audio>  
+    </div>
+  </body>
 </html>

@@ -1,15 +1,237 @@
-.canvas {
+#canvas {
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
+    background-image: url("SRC/background.jpg");    
+    background-size: 100% 100%;
+    font-family: "Audiowide", sans-serif;
+}
+
+#container{
+    position: relative;
+    height: 85vh;
+    width: 40%;
+    left: 30%;
+    margin-top: 20px;
+    background-image: url("SRC/roadimage.jpg");
+    background-size: 100% 100%;
+    border-style: groove;
+    overflow: hidden;
+}
+.line{
+    position: absolute;
+    height: 120px;
+    width: 4%;
+    margin-left: 48%;
+    background-color: rgba(255,255,255,0.5);
+}
+#line_1{
+    top: -90px;
+}
+#line_2{
+    top: 150px;
+}
+#line_3{
+    top: 390px;
+}
+.car{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+}
+
+#car{
+    bottom: 8%;
+    left: 60%;
+}
+
+#car_1{
+    top: -100px;
+    left: 60%;
+    background-image: url("SRC/car\ 1.png");
+        background-size: 100% 100%;
+}
+#car_2{
+    top: -200px;
+    left: 40%;
+    background-image: url("SRC/car\ 2.png");
+    background-size: 100% 100%;
+}
+#car_3{
+    top: -350px;
+    left: 50%;
+    background-image: url("SRC/car\ 3.png");
+    background-size: 100% 100%;
+}
+
+
+
+#surprise {
+    top: -250px;
+    left: 50%;
+    background-image: url("SRC/scoreup.png");
+    background-size: 100% 100%;
+}
+#bad {
+    top: -150px;
+    left: 50%;
+    background-image: url("SRC/mine.png");
+    background-size: 100% 100%;
+}
+
+#restart_div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #292929;
+    color: white;
+    font-family: sans-serif;
+    font-size: 40px;
+    text-align: center;
+    display: none;
+}
+
+#restart {
+    border: none;
+    padding: 25px;
+    color: white;
+    background-color: grey;
+    font-size: 30px;
+    margin-top: 30%;
+}
+.small_text{
+    font-size: 15px;
+}
+#score_div{
+    position: absolute;
+    font-size: 10px;
+    background-color: white;
+    color: #454545;
+    padding: 10px;
+    box-shadow: 4px 4px 0px 1px #808080;
+}
+#help{
+    position: relative;
+	text-align: center;
+    color: white;   
+    background-image: radial-gradient(circle at center, rgb(247, 0, 255) 0%,orange 100%);
+    padding-top: 3px;
+    padding-bottom: 7px;
+}
+
+.smallButton{ 
+    font-size: 10px;
+    background-color: grey;
+    padding:5px;
+    text-decoration: underline;
+    border-radius: 12px;
+}
+
+
+#menu {
+    height: 100vh;
+    background-image: url("SRC/body1.jpg");
+    background-size: 100% 100%;
+    font-family: "Audiowide", sans-serif;
+}
+
+#container-menu {
+    height: 65vh;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center
 }
 
-.square {
-    width: 20px;
-    height: 20px;
-    background-color: beige;
-    border: 1px solid grey;
+.imageText {
+    text-shadow: 2px 2px goldenrod;
+    color: white
 }
 
-.pink {
-    background-color: pink;
+.carSelection {
+    height: 200px;
+    width: 200px;
+    margin-left: .5em;
+    margin-right: .5em;
+    background-color: rgba(111, 111, 210, 0.5);
+    border-radius: 10px;
+    border-style: inset;
+    display: flex
+}
+
+.carSelection2 {
+    height: 200px;
+    margin-left: .5em;
+    margin-right: .5em;
+    width: 200px;
+    background-image: radial-gradient(circle at center, rgb(56, 18, 146) 0%, rgba(150, 148, 154, 0.841) 100%);
+    margin-bottom: 2em;
+    border-style: dotted;
+    display: flex
+}
+
+
+.button {
+    position: relative;
+    width: 30%;
+    left: 35%;
+    background-image: radial-gradient(circle at center, rgb(37, 37, 137) 0%, rgba(150, 148, 154, 0.841) 100%);
+    margin-top: 1.2em;
+    /* Green */
+    border: none;
+    color: bisque;
+    padding: 16px 130px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 12px;
+    display: flex;
+    font-family: "Audiowide", sans-serif
+}
+
+#heading1 {
+    padding-top: .5em;
+    margin: 0;
+    padding-bottom: .5em;
+    text-align: center;
+    border-radius: 2px;
+    color: bisque;
+    background: radial-gradient(circle at center, rgb(37, 37, 137) 0%, rgba(150, 148, 154, 0.841) 100%);
+}
+
+
+#myProgress {
+    width: 100%;
+    background-color: black;
+
+}
+
+#myBar {
+    position: relative;
+    width: 1%;
+    height: 30px;
+    background-color: green;
+    border-radius: 20px;
+    text-align: center;
+    color: white
+}
+
+
+.gameStart {
+    position: relative;
+    width: 30%;
+    left: 35%;
+    background-color:purple;
+    margin-bottom: 2em;
+    margin-top: 1.2em;
+    /* Green */
+    border: none;
+    color: bisque;
+    padding: 16px 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 12px;
+    display: flex;
+    font-family: "Audiowide", sans-serif
 }

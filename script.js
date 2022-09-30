@@ -311,8 +311,10 @@ $(function () {
     console.log("clicked");
     console.log(start_game);
     if (start_game === true) {
-      console.log(avatar[0]);
-      $img = $("<img>").attr("src", avatar[0]).addClass("car");
+      //console.log(avatar[0]);
+      $img = $("<img>")
+        .attr("src", avatar[avatar.length - 1])
+        .addClass("car");
       $("#car").empty().append($img);
 
       //-------------------------Running the game ----------------------------------
